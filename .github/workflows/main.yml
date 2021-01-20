@@ -43,9 +43,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./docker-compose.yml
+          file: ./Dockerfile
           push: true
-       #   tags: ushamandya/simplewhale:latest
+          tags: haegelix/test:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
